@@ -4,6 +4,7 @@ import express from "express";
 import { sessionMiddle } from "./config/session.js";
 import authRoutes from "./routes/authRoutes.js";
 import clientRouter from "./routes/clientRoutes.js";
+import clientsRouter from "./routes/clientsRoutes.js";
 import packageRouter from "./routes/packageRoutes.js";
 import protectedRoutes from "./routes/protectedRoutes.js";
 import regRoutes from "./routes/regRoutes.js";
@@ -33,6 +34,9 @@ app.use("/auth", regRoutes);
 
 // userGet and userUpdate
 app.use("/", protectedRoutes);
+
+// clients routes
+app.use("/clients", clientsRouter);
 
 // client routes
 app.use("/client", clientRouter);

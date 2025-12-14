@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-dotenv.config();
 import prisma from "../config/prismaConfig.js";
+dotenv.config();
 
 export const createPackage = async (req, res) => {
     const { name, price, bandwidth } = req.body;

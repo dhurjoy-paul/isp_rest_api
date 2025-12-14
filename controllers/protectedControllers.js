@@ -15,7 +15,6 @@ export const ispProfile = async (req, res) => {
     return res.json({ success: true, user });
 }
 
-
 export const ispProfileUpdate = async (req, res) => {
     try {
         const uid = req.session.user.isp_id_firebase;
