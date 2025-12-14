@@ -4,3 +4,4 @@ node_modules
 
 /generated/prisma
 config/firebase-key.json
+.vercel
